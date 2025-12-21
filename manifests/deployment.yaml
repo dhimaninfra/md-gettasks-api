@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gettasks-api
+spec:
+  selector:
+    matchLabels:
+      app: gettasks-api
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: gettasks-api
+    spec:
+      containers:
+      - name: gettasks-api
+        image: mdcontainerregistry.azurecr.io/gettasks-api:v1
+        ports:
+        - containerPort: 8000
