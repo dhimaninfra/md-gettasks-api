@@ -17,3 +17,6 @@ spec:
         image: mdcontainerregistry.azurecr.io/md-gettasks:v1
         ports:
         - containerPort: 8000
+        env:
+        - name: CONNECTION_STRING
+          value: "{ODBC Driver 18 for SQL Server};Server=tcp:md-mssql-01.database.windows.net,1433;Database=md-sql-db-01;Uid=sqladmin;Pwd=Sql@123456;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
