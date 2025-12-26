@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gettasks-api
-        image: mdcontainerregistry.azurecr.io/getmicro-api:v1
+        image: mdcontainerregistry.azurecr.io/todo-gettask:v1
         ports:
         - containerPort: 8000
         env:
