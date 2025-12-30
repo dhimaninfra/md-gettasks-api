@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gettasks-api-ingress
+  labels:
+    app.kubernetes.io/name: gettasks-api-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: gettasks-api.dhimaninfra.online
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: gettasks-api
+            port: 
+              number: 80
